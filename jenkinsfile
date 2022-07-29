@@ -5,7 +5,7 @@ pipeline {
         stage ('Checkout Project') {
             steps {
                 checkout scm
-                sh "echo aqui es donde se establece lo del host"
+                sh "echo ' ' > /root/.ssh/known_hosts"
             }
         }
   
