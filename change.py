@@ -6,6 +6,9 @@ try:
     ftp = FTP(host,user,password)
     print("Conexion establecida")
     print("Nos encontramos en la carpeta  "+ftp.pwd())
-    print(+ftp.dir())
+    print(ftp.dir())
+    ftp.mkd("ola")
+    ftp.dir()
+    
 except Exception as e:
     print("Conexion errada: "+str(e))
