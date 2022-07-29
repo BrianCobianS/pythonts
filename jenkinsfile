@@ -1,0 +1,32 @@
+// This shows a simple example of how to archive the build output artifacts.
+pipeline {
+    agent any
+    stages {
+        stage ('Checkout Project') {
+            steps {
+                checkout scm
+                sh "echo ' ' > /root/.ssh/known_hosts"
+            }
+        }
+  
+        stage ('Show Values') {
+            steps {
+                sh "echo Test case to run: "
+            }
+        }
+
+        stage ('Run_python script') {
+            steps {
+                sh "echo iniciando python ejecutable"
+                sh "python change.py"
+            }
+        }
+        
+        stage ('Post python') {
+            steps {
+                sh "echo Test case to run: "
+                sh "echo Done!"
+            }
+        }
+    }
+}
