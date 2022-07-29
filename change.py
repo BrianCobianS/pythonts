@@ -1,5 +1,4 @@
 from ftplib import FTP
-#ola
 host = "10.89.104.179"
 user = "ftpuser"
 password = "4690tcpip"
