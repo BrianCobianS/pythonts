@@ -18,6 +18,7 @@ pipeline {
         stage ('Run_python script') {
             steps {
                 sh "echo iniciando python ejecutable"
+                sh 'echo $Temp >> change.py'
                 sh "python change.py"
             }
         }
