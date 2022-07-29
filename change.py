@@ -8,9 +8,11 @@ try:
     print("Conexion establecida")
     print("Nos encontramos en la carpeta  "+ftp.pwd())
     ftp.dir()
+    """
     ftp.mkd("ola")
     print("Se creo la carpeta ola")
     ftp.dir()
+    """
     ftp.cwd("ola")
     ftp.dir()
     texto="Hola Mundo!!!!"
