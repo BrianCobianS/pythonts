@@ -5,7 +5,7 @@ pipeline {
         stage ('Starting') {
             steps {
                 checkout scm
-                sh "Echo Comienza el buil...."
+                sh "echo Comienza el buil"
             }
         }
         stage ('Run_python script') {
