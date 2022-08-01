@@ -2,19 +2,12 @@
 pipeline {
     agent any
     stages {
-        stage ('Checkout Project') {
+        stage ('Starting') {
             steps {
                 checkout scm
-                sh "echo ' ' > /root/.ssh/known_hosts"
+                sh "Comienza el buil...."
             }
         }
-  
-        stage ('Show Values') {
-            steps {
-                sh "echo Test case to run: "
-            }
-        }
-
         stage ('Run_python script') {
             steps {
                 sh "echo iniciando python ejecutable"
